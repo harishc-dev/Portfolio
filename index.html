@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harish C | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="icon" href="icon.jpeg" type="image/jpeg">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0f0f0f;
+      color: #ffffff;
+      scroll-behavior: smooth;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      background: #111;
+      padding: 10px 0;
+      text-align: center;
+      z-index: 1000;
+    }
+    nav a {
+      color: #00ffcc;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #fff;
+    }
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 100vh;
+      background: radial-gradient(circle at top left, #1c1c1c, #0f0f0f);
+      padding: 20px;
+    }
+    header img {
+      width: 150px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 4px solid #00ffcc;
+    }
+    header h1 {
+      font-size: 3rem;
+      color: #00ffcc;
+    }
+    .typed {
+      font-size: 1.3rem;
+      color: #ccc;
+      margin-top: 10px;
+    }
+    .hero-buttons {
+      margin-top: 30px;
+    }
+    .hero-buttons a {
+      display: inline-block;
+      margin: 0 10px;
+      padding: 10px 25px;
+      border: 2px solid #00ffcc;
+      color: #00ffcc;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: 0.3s;
+    }
+    .hero-buttons a:hover {
+      background: #00ffcc;
+      color: #0f0f0f;
+    }
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 60px 20px;
+      border-bottom: 1px solid #222;
+    }
+    h2 {
+      color: #00ffcc;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+    .skills span {
+      display: inline-block;
+      background: #262626;
+      padding: 10px 18px;
+      margin: 8px;
+      border-radius: 25px;
+      color: #00ffcc;
+      transition: transform 0.3s ease;
+    }
+    .skills span:hover {
+      transform: scale(1.1);
+    }
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-top: 40px;
+      text-align: center;
+      gap: 20px;
+    }
+    .stat-box {
+      background: #1c1c1c;
+      padding: 20px;
+      border-radius: 10px;
+      width: 30%;
+      transition: transform 0.3s ease;
+    }
+    .stat-box:hover {
+      transform: translateY(-5px);
+    }
+    .stat-box h3 {
+      font-size: 2rem;
+      color: #00ffcc;
+    }
+    .stat-box p {
+      color: #ccc;
+    }
+    .project {
+      background: #1f1f1f;
+      padding: 30px;
+      border-radius: 15px;
+      margin-bottom: 30px;
+      transition: transform 0.3s ease;
+    }
+    .project:hover {
+      transform: translateY(-5px);
+    }
+    .project h3 {
+      color: #00ccff;
+      margin-bottom: 10px;
+    }
+    .project p {
+      color: #ccc;
+      margin-bottom: 15px;
+    }
+    .project .btn {
+      display: inline-block;
+      margin: 5px 10px 0 0;
+      padding: 8px 20px;
+      border: 1px solid #00ffcc;
+      color: #00ffcc;
+      border-radius: 20px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .project .btn:hover {
+      background: #00ffcc;
+      color: #0f0f0f;
+    }
+    .quote-box {
+      text-align: center;
+      padding: 40px;
+      background: #191919;
+      border-left: 5px solid #00ffcc;
+      margin-top: 50px;
+      font-style: italic;
+      color: #aaa;
+    }
+    .contact a {
+      color: #00ffcc;
+      text-decoration: none;
+      display: block;
+      margin: 10px 0;
+      transition: color 0.3s ease;
+    }
+    .contact a:hover {
+      color: #fff;
+    }
+    .top-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #00ffcc;
+      color: #0f0f0f;
+      padding: 10px 15px;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 20px;
+      box-shadow: 0 0 10px #00ffcc;
+      transition: background 0.3s ease;
+    }
+    .top-btn:hover {
+      background: #00ccaa;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #1a1a1a;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N3M5B246NT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-N3M5B246NT');
+</script>
+<body>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <header>
+    <img src="icon.jpeg" alt="Harish C">
+    <h1>Harish C</h1>
+    <div class="typed"></div>
+    <div class="hero-buttons">
+      <a href="#contact">Contact Me</a>
+      <a href="HarishC_Resume.pdf">Download Resume</a>
+    </div>
+  </header>
+
+  <section id="about" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>Hi! I’m Harish, a Class 11 student at <strong>Vivekanandha Academy School</strong>. I'm passionate about coding, gaming, music, and travel. I aim to become an ethical hacker and have always been curious about how things work behind the scenes. Even in tough situations, I stay cool and keep learning!</p>
+  </section>
+
+  <section id="skills" data-aos="fade-up">
+    <h2>Skills</h2>
+    <div class="skills">
+      <span>Python</span>
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript (basic)</span>
+      <span>Gaming</span>
+      <span>Music Editing</span>
+    </div>
+    <div class="stats">
+      <div class="stat-box">
+        <h3>10+</h3>
+        <p>Projects</p>
+      </div>
+      <div class="stat-box">
+        <h3>2</h3>
+        <p>Languages</p>
+      </div>
+      <div class="stat-box">
+        <h3>1</h3>
+        <p>Certification</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" data-aos="fade-up">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>📈 Stock Market Simulator</h3>
+      <p>A mini offline stock market simulation app that helps users understand basic trading strategies using pattern-based learning.</p>
+      <a href="https://github.com/haris90e/Stock-Market" class="btn">View Code</a>
+      <a href="demo/stock-trading-app/index.html" class="btn">Live Demo</a>
+    </div>
+    <div class="project">
+      <h3>💬 Whispr – Chat App</h3>
+      <p>A custom-built chat app that combines the features of WhatsApp and Gmail. Supports real-time messaging, file sharing, and a clean user interface.</p>
+      <a href="https://github.com/haris90e/Whispr" class="btn">View Code</a>
+      <a href="demo/whispr/index.html" class="btn">Live Demo</a>
+    </div>
+    <div class="project">
+      <h3>☁️ Cloud Application</h3>
+      <p>A cloud application used for personal data storage that is accessible anywhere. Supports moderate files and all file types.</p>
+      <a href="https://github.com/haris90e/Cloud-server" class="btn">View Code</a>
+      <a href="demo/cloud-storage/index.html" class="btn">Live Demo</a>
+    </div>
+  </section>
+
+  <section id="education" data-aos="fade-up">
+    <h2>Education & Certifications</h2>
+    <p><strong>School:</strong> Vivekanandha Academy School</p>
+    <p><strong>Certification:</strong> Python Programming</p>
+  </section>
+
+  <section id="contact" data-aos="fade-up">
+    <h2>Contact</h2>
+    <div class="contact">
+      <a href="mailto:dev.harish2010@gmail.com">📧 Email: dev.harish2010@gmail.com</a>
+      <a href="https://linkedin.com/in/harishc-dev">🔗 LinkedIn: linkedin/harishc-dev</a>
+      <a href="https://github.com/haris90e" target="_blank">👨🏽‍💻 GitHub: github.com/haris90e</a>
+    </div>
+  </section>
+
+  <div class="quote-box" data-aos="fade-up">
+    “The knock on the door you ignore might be the breach you regret.”
+  </div>
+
+  <a href="#" class="top-btn" title="Back to top">↑</a>
+
+  <footer>
+    <p>&copy; 2025 Harish C. All rights reserved.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+    new Typed(".typed", {
+      strings: ["Aspiring Developer", "Gamer", "Tech Enthusiast"],
+      typeSpeed: 80,
+      backSpeed: 40,
+      loop: true
+    });
+  </script>
+</body>
+</html>
